@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="icon" type="image/png" sizes="32x32" href="./liaisons/assets/favicon-32x32.png">
+  <link rel="stylesheet" href="public/liaisons/css/_"/>-->
+  
+  <title>F M | Flag and stuff</title>
+</head>
+<body>
+  <div class="entete">
+    <h1 class="entete_titre"><a href="index.html">Where in the world</a></h1>
+    <p class="entete_setting"><input id="changeSetting" name="changeSetting" type="checkbox"><label for="changeSetting">Dark Mode</label></p>
+  </div>
+  
+  <div class="barre">
+    <label for="barre_recherche">ENGRENAGE<svg>ENGRENAGE</svg></label>
+    <input class="barre_recherche" type="text" name="barre_recherche" id="barre_recherche" placeholder="Search for a country">
+    
+    <select aria-placeholder="Filter by Region">
+      <option value="">Filter by Region</option>
+      <option value="africa">Africa</option>
+    </select>
+    
+  </div>
+
+  <ul class="liste_flag" id="liste_flag">
+    <!-- here goes the list from script.js-->
+  </ul>
+  
+</body>
+<script src="public/liaisons/script_index.js"></script>
+</html>

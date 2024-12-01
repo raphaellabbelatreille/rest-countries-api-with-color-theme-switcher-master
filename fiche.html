@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./liaisons/assets/favicon-32x32.png">
+  <link rel="stylesheet" href="public/liaisons/css/style.css"/>
+  
+  <title>F M | fiche</title>
+</head>
+<body>
+  <div class="entete">
+    <h1 class="entete_titre"><a href="index.html">Where in the world</a></h1>
+    <p class="entete_setting"><input id="changeSetting" name="changeSetting" type="checkbox"><label for="changeSetting">Dark Mode</label></p>
+  </div>
+  
+  <div class="barre">
+    <label for="barre_recherche">ENGRENAGE<svg>ENGRENAGE</svg></label>
+    <input class="barre_recherche" type="text" name="barre_recherche" id="barre_recherche" placeholder="Search for a country">
+    
+    <select aria-placeholder="Filter by Region">
+      <option value="">Filter by Region</option>
+      <option value="africa">Africa</option>
+    </select>
+    
+  </div>
+<!-- here goes the list from script.js-->
+ <img id="img" src="">
+  <h2 id="nom">NOM</h2>
+  <ul id="info">
+    <li><strong>Native Name:</strong><span id="Native_Name"></span></li>
+    <li><strong>Population:</strong><span id="Population"></span></li>
+    <li><strong>Region:</strong><span id="Region"></span></li>
+    <li><strong>Sub Region:</strong><span id="Sub_Region"></span></li>
+    <li><strong>Capital:</strong><span id="Capital"></span></li>
+    <li><strong>Top Level Domain:</strong><span id="Top_Level_Domain"></span></li>
+    <li><strong>Currencies:</strong><span id="Currencies"></span></li>
+    <li><strong>Languages:</strong><span id="Languages"></span></li>
+  </ul>
+    
+  
+</body>
+<script src="public/liaisons/script_fiche.js"></script>
+</html>
