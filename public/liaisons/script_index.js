@@ -1,12 +1,12 @@
 
 document.getElementById('barre_recherche').addEventListener('blur', function(e) {
     e.preventDefault();
-    const countryName = "/all";
-    console.log(e.value)
-    if (e.value != null){
-        countryName ="/name/"+ e.value;
-    } else {
-    }
+    value =document.getElementById('barre_recherche').value
+    let countryName = "/all";
+    console.log(value)
+    if (value != null){
+        countryName = "/name/"+ value;
+    } 
     getPays(countryName)
 }
 )
@@ -18,7 +18,8 @@ function getPays(name){
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const listeRecettes = document.getElementById('liste_flag');
+            let listePays = document.getElementById('liste_flag');
+            listePays.innerHTML = "";
             console.log(data)
 
             data.forEach(hit => {
@@ -53,7 +54,7 @@ function getPays(name){
 
                 nouveauLi.appendChild(aLayer)
                 
-                listeRecettes.appendChild(nouveauLi)
+                listePays.appendChild(nouveauLi)
             });
         })
         .catch(error => console.error('Erreur:', error));

@@ -8,21 +8,14 @@
   
   <title>F M | fiche</title>
 </head>
-<body>
-  <div class="entete">
+<body class="canChangeColor">
+  <div class="entete canChangeColor">
     <h1 class="entete_titre"><a href="index.html">Where in the world</a></h1>
-    <p class="entete_setting"><input id="changeSetting" name="changeSetting" type="checkbox"><label for="changeSetting">Dark Mode</label></p>
+    <div class="entete_setting"><button id="changeSetting">Dark Mode</button></div>
   </div>
   
-  <div class="barre">
-    <label for="barre_recherche">ENGRENAGE<svg>ENGRENAGE</svg></label>
-    <input class="barre_recherche" type="text" name="barre_recherche" id="barre_recherche" placeholder="Search for a country">
-    
-    <select aria-placeholder="Filter by Region">
-      <option value="">Filter by Region</option>
-      <option value="africa">Africa</option>
-    </select>
-    
+  <div class="back_div">
+    <button onclick="history.back()">Back</button>
   </div>
 <!-- here goes the list from script.js-->
  <img id="img" src="">
@@ -41,4 +34,5 @@
   
 </body>
 <script src="public/liaisons/script_fiche.js"></script>
+<script src="public/liaisons/script_theme.js"></script>
 </html>

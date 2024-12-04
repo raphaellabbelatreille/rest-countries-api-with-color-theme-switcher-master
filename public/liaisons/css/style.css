@@ -1,0 +1,94 @@
+.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+}
+.dark * {
+  background-color: hsl(209, 23%, 22%);
+}
+.dark button, .dark input, .dark a, .dark option, .dark select {
+  color: hsl(0, 0%, 100%);
+}
+
+.light {
+  background-color: hsl(0, 0%, 98%);
+  color: black;
+}
+.light * {
+  background-color: hsl(0, 0%, 100%);
+}
+.light button, .light input, .light a, .light option, .light select {
+  color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.entete {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  border-bottom: 3px solid hsl(0, 0%, 52%);
+}
+.entete.dark {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.barre {
+  position: relative;
+  background: none;
+  padding: 2em 10%;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  height: 50px;
+}
+.barre .recherche_conteneur {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .barre .recherche_conteneur {
+    width: 400px;
+  }
+}
+.barre .recherche_conteneur label {
+  margin: auto;
+}
+.barre .recherche_conteneur label svg {
+  height: 40px;
+  width: 40px;
+}
+.barre .recherche_conteneur input {
+  width: calc(100% - 60px);
+  height: 100%;
+}
+
+.liste_flag {
+  background: none;
+  list-style: none;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-block-start: 0px;
+  margin-inline-start: 0px;
+  padding-inline-start: 0px;
+}
+.liste_flag li {
+  position: relative;
+  width: 350px;
+}
+.liste_flag li *:not(img, a) {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.liste_flag li img {
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

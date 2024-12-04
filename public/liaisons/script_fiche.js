@@ -1,16 +1,3 @@
-
-document.getElementById('barre_recherche').addEventListener('blur', function(e) {
-    e.preventDefault();
-    const countryName = "/all";
-    console.log(e.value)
-    if (e.value != null){
-        countryName ="/name/"+ e.value;
-    } else {
-    }
-    getPays(countryName)
-}
-)
-    
 function getPays(){
     let fullUrl = window.location.search;
     let params = new URLSearchParams(fullUrl);
@@ -34,16 +21,19 @@ function getPays(){
             document.getElementById("Capital").innerText= thing.capital;
             document.getElementById("Top_Level_Domain").innerText= thing.tld;
             
-            document.getElementById("Currencies").innerText= thing.currencies.EUR.name;
+            //document.getElementById("Currencies").innerText= thing.currencies.EUR.name;
             let add = ""
-            console.log(thing["languages"])
-            for (let index=0; index<thing["languages"];index++){
-                console.log(thing.languages[index])
-                add += thing.languages[index];
+            console.log(thing["languages"]);
+            arrayVerifi = ["eng", "fra", "gsw", "ita","roh","hun","zho","ara","ind","por"];
+            for (let index=0; index<arrayVerifi.length;index++){
+                if (thing["languages"][arrayVerifi[index]]!= null){
+                    add += thing.languages[arrayVerifi[index]] + ", ";
+                }
+                
             }
-            //document.getElementById("Languages").innerText= thing.languages.eng;
+            document.getElementById("Languages").innerText= add;
 
         })
-        .catch(error => console.error('Erreur:', error));
+        //.catch(error => console.error('Erreur:', error));
 };
 getPays();
