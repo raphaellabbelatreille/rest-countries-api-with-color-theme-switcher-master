@@ -34,6 +34,6 @@ function getPays(){
             document.getElementById("Languages").innerText= add;
 
         })
-        //.catch(error => console.error('Erreur:', error));
+        .catch(error => console.error('Erreur:', error));
 };
 getPays();
