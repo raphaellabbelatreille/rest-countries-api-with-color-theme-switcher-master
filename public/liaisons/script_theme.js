@@ -4,7 +4,7 @@ function changeThemeColor(){
     let currentColor = localStorage.getItem("color");
     let newColor = "";
     switch(currentColor){
-        case "dark": newColor = "light" ; break;
+        case "dark": case "null": default: newColor = "light" ; break;
         case "light": newColor = "dark" ; break;
     }
     console.log(currentColor+" change color to " + newColor)
